@@ -1,0 +1,134 @@
+let SessionLoad = 1
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+let GtagsCscope_Ignore_Case =  0 
+let Gtags_Shell_Quote_Char = "'"
+let Gtags_Auto_Update =  0 
+let AutoPairsMapBS =  1 
+let AutoPairsShortcutBackInsert = "<M-b>"
+let AutoPairsLoaded =  1 
+let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
+let GtagsCscope_Keep_Alive =  0 
+let EditorConfig_preserve_formatoptions =  0 
+let GtagsCscope_Quiet =  0 
+let GtagsCscope_Auto_Load =  0 
+let AutoPairsShortcutToggle = "<M-p>"
+let AutoPairsMapCR =  1 
+let GtagsCscope_Auto_Map =  0 
+let AutoPairsMapCh =  1 
+let DevIconsEnableFoldersOpenClose =  0 
+let GtagsCscope_Use_Old_Key_Map =  0 
+let Gtags_Double_Quote_Char = "\""
+let EditorConfig_exec_path = ""
+let WebDevIconsNerdTreeAfterGlyphPadding = " "
+let DevIconsEnableFolderExtensionPatternMatching =  0 
+let Gtags_OpenQuickfixWindow =  1 
+let Gtags_Single_Quote_Char = "'\"'\"'"
+let Gtags_Efm = "%f	%l	%m"
+let WebDevIconsUnicodeDecorateFileNodes =  1 
+let AutoPairsSmartQuotes =  1 
+let DevIconsEnableFolderPatternMatching =  1 
+let Gtags_Close_When_Single =  0 
+let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
+let AutoPairsShortcutFastWrap = "<M-e>"
+let WebDevIconsTabAirLineAfterGlyphPadding = ""
+let DevIconsArtifactFixChar = " "
+let EditorConfig_max_line_indicator = "line"
+let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
+let DevIconsAppendArtifactFix =  0 
+let Gtags_No_Auto_Jump =  0 
+let WebDevIconsUnicodeDecorateFolderNodes =  1 
+let WebDevIconsNerdTreeBeforeGlyphPadding = " "
+let WebDevIconsUnicodeGlyphDoubleWidth =  1 
+let AutoPairsMultilineClose =  1 
+let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
+let AutoPairsShortcutJump = "<M-n>"
+let AutoPairsMapSpace =  1 
+let GtagsCscope_Absolute_Path =  0 
+let EditorConfig_verbose =  0 
+let AutoPairsCenterLine =  1 
+let AutoPairsFlyMode =  0 
+let NERDTreeUpdateOnCursorHold =  1 
+let DevIconsDefaultFolderOpenSymbol = ""
+let Gtags_VerticalWindow =  0 
+let Gtags_Auto_Map =  0 
+let WebDevIconsTabAirLineBeforeGlyphPadding = " "
+let AutoPairsMoveCharacter = "()[]{}\"'"
+let AutoPairsWildClosedPair = ""
+let Gtags_Emacs_Like_Mode =  0 
+let Gtags_Result = "ctags-mod"
+silent only
+cd ~/Devel/xakia/X20.Vue.External
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +28 src/views/LegalRequest.container.vue
+badd +57 src/store/modules/legalRequestDetail/mutations.ts
+badd +1 src/services/helper.service.ts
+argglobal
+%argdel
+edit src/views/LegalRequest.container.vue
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 124 + 125) / 250)
+argglobal
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 28 - ((21 * winheight(0) + 32) / 64)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+28
+normal! 0
+wincmd w
+argglobal
+if bufexists("src/store/modules/legalRequestDetail/mutations.ts") | buffer src/store/modules/legalRequestDetail/mutations.ts | else | edit src/store/modules/legalRequestDetail/mutations.ts | endif
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 57 - ((43 * winheight(0) + 32) / 64)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+57
+normal! 018|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 124 + 125) / 250)
+tabnext 1
+if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFc
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

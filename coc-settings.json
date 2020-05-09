@@ -1,0 +1,32 @@
+{
+  // EMMET
+	"emmet.showExpandedAbbreviation":"always",
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.includeLanguages": {"vue-html": "html"},
+  // FORMATTING
+	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx", "html", "css", "scss"],
+
+  // Explorer
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.width": 50,
+  "explorer.keyMappings": {
+    "<cr>" : ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  },
+  "cSpell.userWords": [
+    "Paginator",
+    "Slideout",
+    "Worklog",
+    "ebilling",
+    "mixins",
+    "nosplit",
+    "rnvimr",
+    "scrollable",
+    "scrollbar",
+    "sidenav",
+    "xakia",
+    "xakiage"
+  ]
+}
+
