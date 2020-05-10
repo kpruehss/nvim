@@ -1,6 +1,3 @@
-" Set leader key
-let g:mapleader = "\\"
-
 syntax enable                          " Enable syntax highlighting
 set hidden                             " Required to keep multiple buffers open
 set nowrap                             " Don't wrap long lines of text
@@ -14,6 +11,7 @@ set splitright                         " V-Splits appear to the right
 set foldmethod=manual                  " set folding method marker
 set completeopt-=preview
 set nobackup
+set background=dark
 set mouse=nv                           " Enable mouse support in Normal/Visual mode
 set nobackup                           " Recommended by COC
 set nowritebackup                      " Recommended by COC
@@ -40,7 +38,7 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set smarttab
-set expandtab  " Use spaces instead of tabs
+set expandtab                          " Use spaces instead of tabs
 set smartindent
 set statusline=%{FugitiveStatusline()}
 set spellfile=$HOME/.config/.vim-spell-en.utf-8.add
@@ -50,7 +48,7 @@ set number
 set numberwidth=4
 autocmd BufEnter,FocusGained,InsertLeave * :set relativenumber
 autocmd BufLeave,FocusLost,InsertEnter * :set norelativenumber
-
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Automatically preseve folds
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview 

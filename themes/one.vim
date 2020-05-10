@@ -13,7 +13,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-set background=dark
 colorscheme one
 let g:one_allow_italics = 1 " I love italic for comments
 let g:airline_theme='one'

@@ -19,6 +19,8 @@
     "Slideout",
     "Worklog",
     "ebilling",
+    "funcobj",
+    "goyo",
     "mixins",
     "nosplit",
     "rnvimr",
