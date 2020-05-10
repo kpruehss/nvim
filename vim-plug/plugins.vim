@@ -20,7 +20,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-" Project Navigation {{{2
+" Project Navigation
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
@@ -57,6 +57,7 @@ Plug 'sheerun/vim-polyglot'               " Vim language support
 " Task Running /REPL
 Plug 'janko/vim-test'
 Plug 'tpope/vim-dispatch'
+Plug 'voldikss/vim-floaterm'
 " Git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'                 " Git stuff in Vim
