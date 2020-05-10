@@ -49,12 +49,6 @@ set numberwidth=4
 autocmd BufEnter,FocusGained,InsertLeave * :set relativenumber
 autocmd BufLeave,FocusLost,InsertEnter * :set norelativenumber
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-" Automatically preseve folds
-augroup AutoSaveFolds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent loadview
-augroup END
 " Make it obvious where 80 characters is
 if exists('+colorcolumn')
   set textwidth=80
