@@ -20,6 +20,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'jbgutierrez/vim-better-comments'
 " Project Navigation
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
