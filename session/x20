@@ -5,34 +5,33 @@ let GtagsCscope_Ignore_Case =  0
 let Gtags_Shell_Quote_Char = "'"
 let Gtags_Auto_Update =  0 
 let AutoPairsMapBS =  1 
+let Gtags_Double_Quote_Char = "\""
 let AutoPairsShortcutBackInsert = "<M-b>"
-let AutoPairsLoaded =  1 
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let GtagsCscope_Keep_Alive =  0 
 let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
 let GtagsCscope_Auto_Load =  0 
 let AutoPairsShortcutToggle = "<M-p>"
-let Gtags_Close_When_Single =  0 
 let AutoPairsMapCR =  1 
+let Gtags_VerticalWindow =  0 
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
-let Gtags_Double_Quote_Char = "\""
 let EditorConfig_exec_path = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
-let DevIconsEnableFolderExtensionPatternMatching =  0 
-let Gtags_OpenQuickfixWindow =  1 
 let Gtags_Efm = "%f	%l	%m"
 let WebDevIconsUnicodeDecorateFileNodes =  1 
 let AutoPairsMapCh =  1 
 let AutoPairsSmartQuotes =  1 
 let DevIconsEnableFolderPatternMatching =  1 
+let Gtags_Close_When_Single =  0 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let AutoPairsShortcutFastWrap = "<M-e>"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let AutoPairsLoaded =  1 
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let DevIconsAppendArtifactFix =  0 
@@ -53,12 +52,13 @@ let Gtags_Emacs_Like_Mode =  0
 let AutoPairsFlyMode =  0 
 let NERDTreeUpdateOnCursorHold =  1 
 let DevIconsDefaultFolderOpenSymbol = ""
-let Gtags_VerticalWindow =  0 
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
+let Gtags_OpenQuickfixWindow =  1 
 silent only
 cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
@@ -68,24 +68,24 @@ set shortmess=aoO
 badd +19 src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.ts
 badd +12 src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.html
 badd +496 src/assets/i18n/en.json
-badd +142 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
+badd +148 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
 badd +44 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.html
 badd +65 src/app/features/admin/general-settings/general-settings.module.ts
 badd +1 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.scss
 badd +21 src/app/features/admin/general-settings/services/feature.service.ts
-badd +1 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html
+badd +9 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html
 badd +30 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.ts
 badd +5 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.html
-badd +28 src/app/features/admin/general-settings/models/index.ts
+badd +1 src/app/features/admin/general-settings/models/index.ts
 badd +1 src/app/features/admin/general-settings/models/general-settings.model.ts
-badd +326 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +64 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 badd +60 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.ts
 badd +388 src/app/shared/modules/contract-log-container/contract-log-container.component.ts
 badd +37 src/app/shared/modules/contract-log-container/contract-log-container.module.ts
 badd +22 ~/Devel/xakia/X20.Angular/src/app/features/admin/general-settings/./modules/reference-field-slideout/reference-field-slideout.module.ts
 argglobal
 %argdel
-edit src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.ts
+edit src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -108,15 +108,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 33) / 66)
+let s:l = 64 - ((57 * winheight(0) + 34) / 68)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 03|
+64
+normal! 0
 wincmd w
 argglobal
-if bufexists("src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts") | buffer src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts | else | edit src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts | endif
+if bufexists("src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html") | buffer src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | else | edit src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -126,14 +126,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 142 - ((17 * winheight(0) + 33) / 66)
+let s:l = 9 - ((8 * winheight(0) + 34) / 68)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-142
+9
 normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
 exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 tabnext 1
