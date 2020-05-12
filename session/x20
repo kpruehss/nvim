@@ -96,8 +96,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
-exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -108,12 +108,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 68 - ((44 * winheight(0) + 31) / 63)
+let s:l = 65 - ((43 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-68
-normal! 03|
+65
+normal! 08|
 wincmd w
 argglobal
 if bufexists("src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html") | buffer src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | else | edit src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | endif
@@ -126,15 +126,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 31) / 63)
+let s:l = 9 - ((8 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 9
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
-exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

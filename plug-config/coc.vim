@@ -95,7 +95,7 @@ omap af <Plug>(coc-funcobj-a)
 " show chunk diff at current position
 nmap gs <Plug>(coc-git-chunkinfo)
 " show commit contains current position
-nmap gc <Plug>(coc-git-commit)
+" nmap gc <Plug>(coc-git-commit)
 " create text object for git chunks
 omap ig <Plug>(coc-git-chunk-inner)
 xmap ig <Plug>(coc-git-chunk-inner)
@@ -140,5 +140,5 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " " Resume latest coc list.
 " nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 " " Coc Explorer
-" nmap <silent> <leader>e :CocCommand explorer<cr>
+nmap <silent> <leader>e :CocCommand explorer<cr>
 

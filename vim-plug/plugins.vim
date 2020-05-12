@@ -14,7 +14,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'            " Handy info
 Plug 'retorillo/airline-tablemode.vim'
 Plug 'edkolev/tmuxline.vim'               " Make the Tmux bar match Vim
-" Plug 'ryanoasis/vim-webdevicons'
+ Plug 'ryanoasis/vim-webdevicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -29,7 +29,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'liuchengxu/vista.vim'                " project wide c-tags
 Plug 'airblade/vim-rooter'
 Plug 'francoiscabrol/ranger.vim'
-"Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-startify'
 " File Navigation
 Plug 'justinmk/vim-sneak'
