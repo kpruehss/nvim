@@ -1,9 +1,10 @@
-" Set leader key
-let mapleader = "\\"
-let localleader = "\\"
-" let mapleader=" "
+" g Leader key
+let mapleader=" "
 " let localleader=" "
-" nnoremap <Space> <Nop>
+nnoremap <Space> <Nop>
+" Set leader key
+" let mapleader = "\\"
+" let localleader = "\\"
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
@@ -19,6 +20,10 @@ else
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
 
+  " I hate escape more than anything else
+  inoremap jk <Esc>
+  inoremap kj <Esc>
+
   " Use alt + hjkl to resize windows
   nnoremap <S-A-j>    :resize -2<CR>
   nnoremap <S-A-k>    :resize +2<CR>
@@ -27,13 +32,9 @@ else
   nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
   nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
-  " I hate escape more than anything else
-  inoremap jk <Esc>
-  inoremap kj <Esc>
-
   " Easy CAPS
-  inoremap <c-u> <ESC>viwUi
-  nnoremap <c-u> viwU<Esc>
+  " inoremap <c-u> <ESC>viwUi
+  " nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
   nnoremap <TAB> :bnext<CR>
@@ -54,10 +55,6 @@ else
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
-
-  " Delete to start of line and go into insert mode
-  nnoremap <Leader>o o<Esc>^Da
-  nnoremap <Leader>O O<Esc>^Da
 
   " Quickly find file
   nnoremap <C-p> :Files<cr>

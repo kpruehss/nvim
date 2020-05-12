@@ -1,18 +1,36 @@
 {
   // EMMET
-	"emmet.showExpandedAbbreviation":"always",
+  "emmet.showExpandedAbbreviation":"always",
   "emmet.showAbbreviationSuggestions": true,
   "emmet.includeLanguages": {"vue-html": "html"},
   // FORMATTING
-	"coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "typescriptreact", "json", "javascriptreact", "typescript.tsx", "html", "css", "scss"],
-
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "yaml", "json", "javascriptreact", "html", "css", "scss"],
+  "coc.preferences.hoverTarget": "float",
   // Explorer
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
+  "explorer.icon.enableVimDevicons": true,
   "explorer.width": 50,
   "explorer.keyMappings": {
     "<cr>" : ["expandable?", "expand", "open"],
     "v": "open:vsplit"
+  },
+  // diagnostics
+  "diagnostic.errorSign": "✗",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+  // list
+  "list.indicator": ">",
+  "list.selectedSignText": " ",
+
+  "languageserver":{
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
   },
   "cSpell.userWords": [
     "Paginator",
@@ -22,11 +40,13 @@
     "funcobj",
     "goyo",
     "mixins",
+    "ngrx",
     "nosplit",
     "rnvimr",
     "scrollable",
     "scrollbar",
     "sidenav",
+    "toastr",
     "xakia",
     "xakiage"
   ]

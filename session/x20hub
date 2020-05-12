@@ -13,14 +13,13 @@ let GtagsCscope_Quiet =  0
 let GtagsCscope_Auto_Load =  0 
 let AutoPairsShortcutToggle = "<M-p>"
 let AutoPairsMapCR =  1 
+let Gtags_VerticalWindow =  0 
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
 let EditorConfig_exec_path = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let Gtags_OpenQuickfixWindow =  1 
-let Gtags_Single_Quote_Char = "'\"'\"'"
 let Gtags_Efm = "%f	%l	%m"
 let WebDevIconsUnicodeDecorateFileNodes =  1 
 let AutoPairsMapCh =  1 
@@ -45,36 +44,37 @@ let AutoPairsMultilineClose =  1
 let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
+let Gtags_Single_Quote_Char = "'\"'\"'"
 let GtagsCscope_Absolute_Path =  0 
 let EditorConfig_verbose =  0 
 let Gtags_Auto_Map =  0 
 let AutoPairsCenterLine =  1 
+let Gtags_Emacs_Like_Mode =  0 
 let AutoPairsFlyMode =  0 
 let NERDTreeUpdateOnCursorHold =  1 
 let DevIconsDefaultFolderOpenSymbol = ""
-let Gtags_VerticalWindow =  0 
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
 let GtagsCscope_Auto_Map =  0 
-let Gtags_Emacs_Like_Mode =  0 
 let Gtags_Result = "ctags-mod"
 silent only
-cd ~/Devel/xakia/X20.Vue.External
+cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +75 src/views/LegalRequest.container.vue
-badd +57 src/store/modules/legalRequestDetail/mutations.ts
-badd +1 src/services/helper.service.ts
-badd +47 src/components/RequestLayout.component.vue
-badd +405 src/components/RequestTab.component.vue
-badd +21 package.json
-badd +13 src/components/DatePicker.component.vue
+badd +2 ~/Devel/xakia/X20.Hub/src/modules/Matter/Pages/MatterListPage.vue
+badd +421 ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue
+badd +20 ~/Devel/xakia/X20.Hub/src/components/XakiaMoneyInput.vue
+badd +39 ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/MatterList.vue
+badd +12 ~/Devel/xakia/X20.Hub/src/components/SlideoutPanel.vue
+badd +3 ~/Devel/xakia/X20.Hub/src/components/XakiaTextField.vue
+badd +1 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
 argglobal
 %argdel
-edit src/components/DatePicker.component.vue
+edit src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -85,8 +85,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -97,15 +97,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 48 - ((44 * winheight(0) + 33) / 66)
+let s:l = 143 - ((28 * winheight(0) + 34) / 68)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-48
-normal! 012|
+143
+normal! 0
 wincmd w
 argglobal
-if bufexists("src/components/RequestTab.component.vue") | buffer src/components/RequestTab.component.vue | else | edit src/components/RequestTab.component.vue | endif
+if bufexists("~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue") | buffer ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue | else | edit ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -115,21 +115,21 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 405 - ((26 * winheight(0) + 33) / 66)
+let s:l = 421 - ((60 * winheight(0) + 34) / 68)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-405
-normal! 032|
+421
+normal! 020|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
-set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFc
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcI
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
