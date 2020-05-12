@@ -1,52 +1,95 @@
 let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
+let GtagsCscope_Ignore_Case =  0 
+let Gtags_Shell_Quote_Char = "'"
+let Gtags_Auto_Update =  0 
+let AutoPairsMapBS =  1 
+let AutoPairsShortcutBackInsert = "<M-b>"
+let AutoPairsLoaded =  1 
+let GtagsCscope_Keep_Alive =  0 
+let EditorConfig_preserve_formatoptions =  0 
+let GtagsCscope_Quiet =  0 
+let GtagsCscope_Auto_Load =  0 
+let AutoPairsShortcutToggle = "<M-p>"
+let Gtags_Close_When_Single =  0 
+let AutoPairsMapCR =  1 
+let DevIconsEnableFoldersOpenClose =  0 
+let GtagsCscope_Use_Old_Key_Map =  0 
+let Gtags_Double_Quote_Char = "\""
+let EditorConfig_exec_path = ""
+let WebDevIconsNerdTreeAfterGlyphPadding = " "
+let DevIconsEnableFolderExtensionPatternMatching =  0 
+let Gtags_OpenQuickfixWindow =  1 
+let Gtags_Efm = "%f	%l	%m"
+let WebDevIconsUnicodeDecorateFileNodes =  1 
+let AutoPairsMapCh =  1 
+let AutoPairsSmartQuotes =  1 
+let DevIconsEnableFolderPatternMatching =  1 
+let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
+let AutoPairsShortcutFastWrap = "<M-e>"
+let WebDevIconsTabAirLineAfterGlyphPadding = ""
+let DevIconsArtifactFixChar = " "
+let EditorConfig_max_line_indicator = "line"
+let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
+let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
+let DevIconsAppendArtifactFix =  0 
+let Gtags_No_Auto_Jump =  0 
+let WebDevIconsUnicodeDecorateFolderNodes =  1 
+let WebDevIconsNerdTreeBeforeGlyphPadding = " "
+let WebDevIconsUnicodeGlyphDoubleWidth =  1 
+let AutoPairsMultilineClose =  1 
+let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
+let AutoPairsShortcutJump = "<M-n>"
+let AutoPairsMapSpace =  1 
+let Gtags_Single_Quote_Char = "'\"'\"'"
+let GtagsCscope_Absolute_Path =  0 
+let EditorConfig_verbose =  0 
+let Gtags_Auto_Map =  0 
+let AutoPairsCenterLine =  1 
+let Gtags_Emacs_Like_Mode =  0 
+let AutoPairsFlyMode =  0 
+let NERDTreeUpdateOnCursorHold =  1 
+let DevIconsDefaultFolderOpenSymbol = ""
+let Gtags_VerticalWindow =  0 
+let WebDevIconsTabAirLineBeforeGlyphPadding = " "
+let AutoPairsMoveCharacter = "()[]{}\"'"
+let AutoPairsWildClosedPair = ""
+let GtagsCscope_Auto_Map =  0 
+let Gtags_Result = "ctags-mod"
 silent only
-cd ~/Devel/xakia/X20.Angular/.git
+cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/external-firm
-badd +1 ~/Devel/xakia/X20.Angular/src/app/features/matter
-badd +1 ~/Devel/xakia/X20.Angular/src/styles.scss
-badd +296 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/external-firm/external-firm.component.ts
-badd +1 ~/Devel/xakia/X20.Angular/src/app/features/matter/matter-page.component.html
-badd +15 ~/Devel/xakia/X20.Angular/src/app/features/matter/matter-page.component.ts
-badd +24 ~/Devel/xakia/X20.Angular/src/app/features/admin/subscription/components/credit-card-detail-view/credit-card-detail-view.component.ts
-badd +5 ~/Devel/xakia/X20.Angular/src/app/features/admin/subscription/models/billing-contact.model.ts
-badd +66 ~/Devel/xakia/X20.Angular/src/app/features/admin/subscription/pages/subscription-admin-page/subscription-admin-page.component.ts
-badd +854 ~/Devel/xakia/X20.Angular/src/assets/i18n/en.json
-badd +24 ~/Devel/xakia/X20.Angular/src/app/features/admin/subscription/services/payment-method.service.ts
-badd +26 ~/Devel/xakia/X20.Angular/src/app/features/admin/subscription/services/billing-contact.service.ts
-badd +154 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html
-badd +249 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/list-view/list-view.component.ts
-badd +2 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/list-view/list-view.component.html
-badd +31 ~/.config/coc/ultisnips/typescript.snippets
-badd +2 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/matter-template-list/matter-template-list.component.ts
-badd +105 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/matter-template-add/matter-template-add.component.ts
-badd +80 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/matter-detail/matter-detail.component.html
-badd +474 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/matter-detail/matter-detail.component.ts
-badd +518 ~/Devel/xakia/X20.Angular/src/app/features/matter/containers/matter-detail-container/matter-detail-container.component.ts
-badd +179 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
-badd +229 ~/Devel/xakia/X20.Angular/src/app/shared/services/helper.service.ts
-badd +32 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/external-resources/external-resources.component.html
-badd +5 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/external-resources/external-resources.component.ts
-badd +78 ~/Devel/xakia/X20.Angular/src/app/features/matter/models/external-resource.model.ts
-badd +69 ~/Devel/xakia/X20.Angular/src/app/features/matter/containers/matter-detail-container/matter-detail-container.component.html
-badd +38 ~/Devel/xakia/X20.Angular/src/app/features/matter/models/enums.model.ts
-badd +126 ~/Devel/xakia/X20.Angular/src/app/features/admin/security/components/user-list-view/user-list-view.component.ts
+badd +19 src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.ts
+badd +12 src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.html
+badd +496 src/assets/i18n/en.json
+badd +142 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
+badd +44 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.html
+badd +65 src/app/features/admin/general-settings/general-settings.module.ts
+badd +1 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.scss
+badd +21 src/app/features/admin/general-settings/services/feature.service.ts
+badd +1 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html
+badd +30 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.ts
+badd +5 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.html
+badd +28 src/app/features/admin/general-settings/models/index.ts
+badd +1 src/app/features/admin/general-settings/models/general-settings.model.ts
+badd +326 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +60 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.ts
+badd +388 src/app/shared/modules/contract-log-container/contract-log-container.component.ts
+badd +37 src/app/shared/modules/contract-log-container/contract-log-container.module.ts
+badd +22 ~/Devel/xakia/X20.Angular/src/app/features/admin/general-settings/./modules/reference-field-slideout/reference-field-slideout.module.ts
 argglobal
 %argdel
-edit ~/Devel/xakia/X20.Angular/src/app/features/admin/security/components/user-list-view/user-list-view.component.ts
+edit src/app/features/admin/general-settings/modules/reference-field-slideout/reference-field-slideout.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
 wincmd w
 wincmd t
 set winminheight=0
@@ -54,12 +97,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe '2resize ' . ((&lines * 49 + 35) / 70)
 exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
-exe '3resize ' . ((&lines * 17 + 35) / 70)
-exe 'vert 3resize ' . ((&columns * 128 + 128) / 256)
 argglobal
-setlocal fdm=marker
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -67,17 +107,17 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 126 - ((56 * winheight(0) + 33) / 67)
+silent! normal! zE
+let s:l = 19 - ((18 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-126
-normal! 059|
-lcd ~/Devel/xakia/X20.Angular
+19
+normal! 03|
 wincmd w
 argglobal
-if bufexists("~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.ts") | buffer ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | else | edit ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | endif
-setlocal fdm=marker
+if bufexists("src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts") | buffer src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts | else | edit src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts | endif
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -85,37 +125,17 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 316 - ((20 * winheight(0) + 24) / 49)
+silent! normal! zE
+let s:l = 142 - ((17 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-316
-normal! 016|
-lcd ~/Devel/xakia/X20.Angular
+142
+normal! 0
 wincmd w
-argglobal
-if bufexists("~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html") | buffer ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html | else | edit ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html | endif
-setlocal fdm=marker
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 154 - ((8 * winheight(0) + 8) / 17)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-154
-normal! 022|
-lcd ~/Devel/xakia/X20.Angular
-wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe '2resize ' . ((&lines * 49 + 35) / 70)
 exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
-exe '3resize ' . ((&lines * 17 + 35) / 70)
-exe 'vert 3resize ' . ((&columns * 128 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

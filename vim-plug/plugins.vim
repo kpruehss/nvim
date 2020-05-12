@@ -14,7 +14,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'            " Handy info
 Plug 'retorillo/airline-tablemode.vim'
 Plug 'edkolev/tmuxline.vim'               " Make the Tmux bar match Vim
-Plug 'ryanoasis/vim-webdevicons'
+" Plug 'ryanoasis/vim-webdevicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'luochen1990/rainbow'
@@ -27,7 +28,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'liuchengxu/vista.vim'                " project wide c-tags
 Plug 'airblade/vim-rooter'
-Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+Plug 'francoiscabrol/ranger.vim'
+"Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-startify'
 " File Navigation
 Plug 'justinmk/vim-sneak'
@@ -38,13 +40,19 @@ Plug 'farmergreg/vim-lastplace'
 Plug 'tpope/vim-projectionist'
 Plug 'c-brenn/fuzzy-projectionist.vim'
 Plug 'andyl/vim-projectionist-elixir'
+Plug 'rbgrouleff/bclose.vim'
 " Editing
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'                 " Change word surroundings
 Plug 'tpope/vim-commentary'               " Comments stuff
 Plug 'tpope/vim-repeat'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-abolish'                  " String Coercion
+Plug 'glts/vim-radical'
 Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
 Plug 'kana/vim-textobj-user'
 Plug 'sgur/vim-textobj-parameter'
@@ -61,6 +69,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'voldikss/vim-floaterm'
 " Git
 Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'                 " Git stuff in Vim
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim',                   { 'on': 'GV' }
