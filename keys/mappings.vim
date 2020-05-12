@@ -25,10 +25,10 @@ else
   inoremap kj <Esc>
 
   " Use alt + hjkl to resize windows
-  nnoremap <S-A-j>    :resize -2<CR>
-  nnoremap <S-A-k>    :resize +2<CR>
-  nnoremap <S-A-h>    :vertical resize -2<CR>
-  nnoremap <S-A-l>    :vertical resize +2<CR>
+  nnoremap <silent> <S-A-j>    :resize -2<CR>
+  nnoremap <silent> <S-A-k>    :resize +2<CR>
+  nnoremap <silent> <S-A-h>    :vertical resize -2<CR>
+  nnoremap <silent> <S-A-l>    :vertical resize +2<CR>
   nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
   nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
@@ -37,16 +37,16 @@ else
   " nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
-  nnoremap <TAB> :bnext<CR>
+  nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back
-  nnoremap <S-TAB> :bprevious<CR>
+  nnoremap <silent> <S-TAB> :bprevious<CR>
 
   " Alternate way to save
-  nnoremap <C-s> :w<CR>
+  nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
-  nnoremap <C-Q> :wq!<CR>
+  nnoremap <silent> <C-Q> :wq!<CR>
   " Use control-c instead of escape
-  nnoremap <C-c> <Esc>
+  nnoremap <silent> <C-c> <Esc>
   " <TAB>: completion.
   inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
   " Use <C-l> for trigger snippet expand.

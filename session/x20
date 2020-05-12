@@ -78,7 +78,7 @@ badd +30 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout
 badd +5 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.html
 badd +1 src/app/features/admin/general-settings/models/index.ts
 badd +1 src/app/features/admin/general-settings/models/general-settings.model.ts
-badd +68 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +65 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 badd +60 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.ts
 badd +388 src/app/shared/modules/contract-log-container/contract-log-container.component.ts
 badd +37 src/app/shared/modules/contract-log-container/contract-log-container.module.ts

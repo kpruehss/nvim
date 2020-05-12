@@ -21,7 +21,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-Plug 'jbgutierrez/vim-better-comments'
+" Plug 'jbgutierrez/vim-better-comments'
 " Project Navigation
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -29,7 +29,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'liuchengxu/vista.vim'                " project wide c-tags
 Plug 'airblade/vim-rooter'
 Plug 'francoiscabrol/ranger.vim'
-" Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-startify'
 " File Navigation
 Plug 'justinmk/vim-sneak'

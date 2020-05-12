@@ -154,7 +154,6 @@ let g:which_key_map.l = {
 " t is for toggle
 let g:which_key_map.t = {
       \ 'name' : '+toggle' ,
-      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
       \ 'e' : [':CocCommand explorer'    , 'explorer'],
       \ 'n' : [':set nonumber!'          , 'line-numbers'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
@@ -165,4 +164,6 @@ let g:which_key_map.t = {
 
 " Register which key map
 " call which_key#register('<Space>', "g:which_key_map")
+autocmd! User vim-which-key call which_key#register('<Space>', 'g:which_key_map')
+
 
