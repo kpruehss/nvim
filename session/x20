@@ -7,7 +7,6 @@ let Gtags_Auto_Update =  0
 let AutoPairsMapBS =  1 
 let Gtags_Double_Quote_Char = "\""
 let AutoPairsShortcutBackInsert = "<M-b>"
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let GtagsCscope_Keep_Alive =  0 
 let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
@@ -18,6 +17,8 @@ let Gtags_VerticalWindow =  0
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
 let EditorConfig_exec_path = ""
+let DevIconsEnableFolderExtensionPatternMatching =  0 
+let Gtags_OpenQuickfixWindow =  1 
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
 let Gtags_Efm = "%f	%l	%m"
 let WebDevIconsUnicodeDecorateFileNodes =  1 
@@ -32,6 +33,7 @@ let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let AutoPairsLoaded =  1 
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let DevIconsAppendArtifactFix =  0 
@@ -52,13 +54,11 @@ let Gtags_Emacs_Like_Mode =  0
 let AutoPairsFlyMode =  0 
 let NERDTreeUpdateOnCursorHold =  1 
 let DevIconsDefaultFolderOpenSymbol = ""
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
-let Gtags_OpenQuickfixWindow =  1 
 silent only
 cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
@@ -78,7 +78,7 @@ badd +30 src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout
 badd +5 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.html
 badd +1 src/app/features/admin/general-settings/models/index.ts
 badd +1 src/app/features/admin/general-settings/models/general-settings.model.ts
-badd +64 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +68 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 badd +60 src/app/features/admin/general-settings/pages/general-setting-page/general-setting-page.component.ts
 badd +388 src/app/shared/modules/contract-log-container/contract-log-container.component.ts
 badd +37 src/app/shared/modules/contract-log-container/contract-log-container.module.ts
@@ -96,8 +96,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -108,12 +108,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 64 - ((57 * winheight(0) + 34) / 68)
+let s:l = 68 - ((44 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-64
-normal! 0
+68
+normal! 03|
 wincmd w
 argglobal
 if bufexists("src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html") | buffer src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | else | edit src/app/features/admin/xakiage-config/modules/xakiage-settings-slideout/xakiage-settings-slideout.component.html | endif
@@ -126,15 +126,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 34) / 68)
+let s:l = 9 - ((8 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 9
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

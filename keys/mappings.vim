@@ -49,7 +49,8 @@ else
   nnoremap <C-c> <Esc>
   " <TAB>: completion.
   inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
+  " Use <C-l> for trigger snippet expand.
+  imap <C-l> <Plug>(coc-snippets-expand)
   " Better window navigation
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
