@@ -58,14 +58,16 @@ else
   nnoremap <C-l> <C-w>l
 
   " Quickly find file
-  nnoremap <C-p> :Files<cr>
+  " nnoremap <C-p> :Files<cr>
   " RipGrep Search for term via FZF
-  nnoremap <leader>/ :Rg<cr>
+  " nnoremap <leader>/ :Rg<cr>
   " Quick Save
   " nmap <leader>w :w<CR>
-  nmap <silent> <leader>w :wa<CR>
+  " nmap <silent> <leader>w :wa<CR>
+  " Alternate way to save
+  nnoremap <silent> <C-s> :wa<CR>
   " Smarter pasting
-  nnoremap <Leader>p :set invpaste paste?<CR>
+  " nnoremap <Leader>p :set invpaste paste?<CR>
   " Better buffer switching
   nnoremap <C-e> :Buffers<CR>
 
