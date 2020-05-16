@@ -10,8 +10,9 @@ if exists('g:vscode')
 else
   " Themes
   source $HOME/.config/nvim/themes/airline.vim
-  source $HOME/.config/nvim/themes/one.vim
+  " source $HOME/.config/nvim/themes/one.vim
   " source $HOME/.config/nvim/themes/onedark.vim
+  source $HOME/.config/nvim/themes/gruvbox.vim
   " Plug Configs
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/coc.vim
@@ -26,7 +27,7 @@ else
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/ranger.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
-  source $HOME/.config/nvim/plug-config/signify.vim
+  " source $HOME/.config/nvim/plug-config/signify.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
   source $HOME/.config/nvim/plug-config/test.vim

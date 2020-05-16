@@ -49,25 +49,16 @@ else
   nnoremap <silent> <C-c> <Esc>
   " <TAB>: completion.
   inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-  " Use <C-l> for trigger snippet expand.
-  imap <C-l> <Plug>(coc-snippets-expand)
+  
   " Better window navigation
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
 
-  " Quickly find file
-  " nnoremap <C-p> :Files<cr>
-  " RipGrep Search for term via FZF
-  " nnoremap <leader>/ :Rg<cr>
-  " Quick Save
-  " nmap <leader>w :w<CR>
-  " nmap <silent> <leader>w :wa<CR>
   " Alternate way to save
   nnoremap <silent> <C-s> :wa<CR>
-  " Smarter pasting
-  " nnoremap <Leader>p :set invpaste paste?<CR>
+  
   " Better buffer switching
   nnoremap <C-e> :Buffers<CR>
 
@@ -102,8 +93,18 @@ else
   nnoremap th :tabprev<CR>
   nnoremap tj :tablast<CR>
   nnoremap tn :tabnew<CR>
-  nnoremap tc :CtrlSpaceTabLabel<CR>
   nnoremap td :tabclose<CR>
+
+  " Terminal window navigation
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
+  inoremap <C-h> <C-\><C-N><C-w>h
+  inoremap <C-j> <C-\><C-N><C-w>j
+  inoremap <C-k> <C-\><C-N><C-w>k
+  inoremap <C-l> <C-\><C-N><C-w>l
+  tnoremap <Esc> <C-\><C-n>
 
   " No More Arrow Keys
   noremap <Up> <Nop>

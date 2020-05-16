@@ -8,9 +8,9 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 " UI
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'            " Handy info
 Plug 'retorillo/airline-tablemode.vim'
 Plug 'edkolev/tmuxline.vim'               " Make the Tmux bar match Vim
@@ -42,33 +42,34 @@ Plug 'c-brenn/fuzzy-projectionist.vim'
 Plug 'andyl/vim-projectionist-elixir'
 Plug 'rbgrouleff/bclose.vim'
 " Editing
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-surround'                 " Change word surroundings
-Plug 'tpope/vim-commentary'               " Comments stuff
-Plug 'tpope/vim-repeat'
-Plug 'alvan/vim-closetag'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-abolish'                  " String Coercion
-Plug 'glts/vim-radical'
-Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
-Plug 'kana/vim-textobj-user'
-Plug 'sgur/vim-textobj-parameter'
-Plug 'jasonlong/vim-textobj-css'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'prettier/vim-prettier'
 Plug 'Olical/vim-enmasse'                 " Edit all files in a Quickfix list
+Plug 'alvan/vim-closetag'
+Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
+Plug 'editorconfig/editorconfig-vim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'glts/vim-radical'
+Plug 'jasonlong/vim-textobj-css'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kana/vim-textobj-user'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prettier/vim-prettier'
+Plug 'sgur/vim-textobj-parameter'
 Plug 'sheerun/vim-polyglot'               " Vim language support
+Plug 'tommcdo/vim-exchange'               " Swap regions of text
+Plug 'tpope/vim-abolish'                  " String Coercion
+Plug 'tpope/vim-commentary'               " Comments stuff
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-surround'                 " Change word surroundings
+Plug 'tpope/vim-unimpaired'
 " Task Running /REPL
 Plug 'janko/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'voldikss/vim-floaterm'
 " Git
-Plug 'mhinz/vim-signify'
+"Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'                 " Git stuff in Vim
 Plug 'tpope/vim-rhubarb'

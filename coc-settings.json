@@ -1,18 +1,29 @@
 {
   // EMMET
-  "emmet.showExpandedAbbreviation":"always",
+  "emmet.showExpandedAbbreviation": "always",
   "emmet.showAbbreviationSuggestions": true,
-  "emmet.includeLanguages": {"vue-html": "html"},
+  "emmet.includeLanguages": { "vue-html": "html" },
   // FORMATTING
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript", "yaml", "json", "javascriptreact", "html", "css", "scss"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "yaml",
+    "json",
+    "javascriptreact",
+    "html",
+    "css",
+    "scss"
+  ],
   "coc.preferences.hoverTarget": "float",
+  // snippets
+  "snippets.ultisnips.directories": ["../coc/ultisnips/json.snippets"],
   // Explorer
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.icon.enableVimDevicons": true,
+  "explorer.icon.enableVimDevicons": false,
   "explorer.width": 50,
   "explorer.keyMappings": {
-    "<cr>" : ["expandable?", "expand", "open"],
+    "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
   // diagnostics
@@ -24,7 +35,7 @@
   "list.indicator": ">",
   "list.selectedSignText": " ",
 
-  "languageserver":{
+  "languageserver": {
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],
@@ -33,24 +44,32 @@
     }
   },
   "cSpell.userWords": [
+    "Autosize",
+    "Gcommit",
+    "Gdiffsplit",
     "Gstatus",
     "Paginator",
     "Slideout",
+    "Startify",
+    "Webhooks",
     "Worklog",
     "ebilling",
     "floaterm",
     "funcobj",
+    "globalconfig",
     "goyo",
+    "gruvbox",
     "mixins",
     "ngrx",
     "nosplit",
+    "nums",
     "rnvimr",
     "scrollable",
     "scrollbar",
     "sidenav",
     "toastr",
+    "webhook",
     "xakia",
     "xakiage"
   ]
 }
-
