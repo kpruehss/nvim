@@ -7,7 +7,6 @@ let Gtags_Shell_Quote_Char = "'"
 let Gtags_Auto_Update =  0 
 let AutoPairsMapBS =  1 
 let AutoPairsShortcutBackInsert = "<M-b>"
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let GtagsCscope_Keep_Alive =  0 
 let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
@@ -20,6 +19,7 @@ let GtagsCscope_Use_Old_Key_Map =  0
 let Gtags_Double_Quote_Char = "\""
 let EditorConfig_exec_path = ""
 let UltiSnipsRemoveSelectModeMappings =  1 
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
@@ -36,6 +36,7 @@ let EditorConfig_max_line_indicator = "line"
 let AutoPairsCenterLine =  1 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let AutoPairsLoaded =  1 
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let DevIconsAppendArtifactFix =  0 
@@ -59,7 +60,6 @@ let AutoPairsFlyMode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
@@ -72,11 +72,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +331 src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
-badd +1 src/app/features/matter/containers/matter-detail-container/matter-detail-container.component.ts
+badd +56 src/app/shared/modules/contract-log-table/contract-log-table.component.ts
+badd +245 src/app/shared/modules/contract-log-table/contract-log-table.component.html
 argglobal
 %argdel
-edit src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
+edit src/app/shared/modules/contract-log-table/contract-log-table.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -87,8 +87,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -99,15 +99,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 331 - ((32 * winheight(0) + 33) / 66)
+let s:l = 57 - ((51 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-331
-normal! 025|
+57
+normal! 0
 wincmd w
 argglobal
-if bufexists("src/app/features/matter/components/core-matter-form/core-matter-form.component.ts") | buffer src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | else | edit src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | endif
+if bufexists("src/app/shared/modules/contract-log-table/contract-log-table.component.html") | buffer src/app/shared/modules/contract-log-table/contract-log-table.component.html | else | edit src/app/shared/modules/contract-log-table/contract-log-table.component.html | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -117,15 +117,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 331 - ((32 * winheight(0) + 33) / 66)
+let s:l = 311 - ((49 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-331
-normal! 025|
+311
+normal! 021|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
