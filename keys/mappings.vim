@@ -22,7 +22,6 @@ else
 
   " I hate escape more than anything else
   inoremap jk <Esc>
-  inoremap kj <Esc>
 
   " Use alt + hjkl to resize windows
   nnoremap <silent> <S-A-j>    :resize -2<CR>
@@ -82,10 +81,10 @@ else
 
   " Remap the increment and decrement features of Vim
   nnoremap <A-a> <C-a>
-  nnoremap å <C-a>
+  " nnoremap å <C-a>
 
   nnoremap <A-x> <C-x>
-  nnoremap ≈ <C-x>
+  " nnoremap ≈ <C-x>
 
   " Tab Shortcuts
   nnoremap tk :tabfirst<CR>

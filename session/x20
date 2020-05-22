@@ -7,6 +7,7 @@ let Gtags_Shell_Quote_Char = "'"
 let Gtags_Auto_Update =  0 
 let AutoPairsMapBS =  1 
 let AutoPairsShortcutBackInsert = "<M-b>"
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let GtagsCscope_Keep_Alive =  0 
 let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
@@ -19,7 +20,6 @@ let GtagsCscope_Use_Old_Key_Map =  0
 let Gtags_Double_Quote_Char = "\""
 let EditorConfig_exec_path = ""
 let UltiSnipsRemoveSelectModeMappings =  1 
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
@@ -36,7 +36,6 @@ let EditorConfig_max_line_indicator = "line"
 let AutoPairsCenterLine =  1 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let AutoPairsLoaded =  1 
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let DevIconsAppendArtifactFix =  0 
@@ -60,6 +59,7 @@ let AutoPairsFlyMode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
@@ -72,22 +72,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +25 src/app/features/admin/developers/modules/webhooks/webhooks.component.ts
-badd +19 src/app/features/admin/developers/modules/webhooks/webhooks.component.html
-badd +1 src/app/features/admin/developers/modules/api-key/api-key.component.html
-badd +1444 src/assets/i18n/en.json
-badd +22 src/app/features/admin/developers/modules/developers-container/developers-container.component.html
-badd +18 src/app/shared/modules/contract-log-list/contract-log-list.component.ts
-badd +16 src/app/shared/modules/contract-log-list/contract-log-list.component.html
-badd +1 src/app/shared/modules/contract-log-table/contract-log-table.component.html
-badd +103 src/app/shared/modules/contract-log-table/contract-log-table.component.ts
-badd +15 src/app/features/admin/developers/models/api-key.model.ts
-badd +7 src/app/features/admin/developers/models/webhooks.model.ts
-badd +0 \[coc-explorer]-1
-badd +0 src/app/features/admin/developers/modules/api-key/api-key.component.ts
+badd +331 src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
+badd +1 src/app/features/matter/containers/matter-detail-container/matter-detail-container.component.ts
 argglobal
 %argdel
-edit src/app/features/admin/developers/modules/api-key/api-key.component.ts
+edit src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -110,15 +99,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 42 - ((41 * winheight(0) + 33) / 66)
+let s:l = 331 - ((32 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-42
-normal! 0
+331
+normal! 025|
 wincmd w
 argglobal
-if bufexists("src/app/features/admin/developers/modules/api-key/api-key.component.html") | buffer src/app/features/admin/developers/modules/api-key/api-key.component.html | else | edit src/app/features/admin/developers/modules/api-key/api-key.component.html | endif
+if bufexists("src/app/features/matter/components/core-matter-form/core-matter-form.component.ts") | buffer src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | else | edit src/app/features/matter/components/core-matter-form/core-matter-form.component.ts | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -128,12 +117,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 33) / 66)
+let s:l = 331 - ((32 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 05|
+331
+normal! 025|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
 exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)

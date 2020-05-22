@@ -27,10 +27,12 @@ else
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/ranger.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
-  " source $HOME/.config/nvim/plug-config/signify.vim
+  source $HOME/.config/nvim/plug-config/gitgutter.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
   source $HOME/.config/nvim/plug-config/test.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
   source $HOME/.config/nvim/plug-config/vista.vim
 endif
+
+let g:codi#rightalign=0
