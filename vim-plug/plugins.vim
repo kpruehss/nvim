@@ -14,7 +14,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'            " Handy info
 Plug 'retorillo/airline-tablemode.vim'
 Plug 'edkolev/tmuxline.vim'               " Make the Tmux bar match Vim
- Plug 'ryanoasis/vim-webdevicons'
+Plug 'ryanoasis/vim-webdevicons'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -28,7 +28,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'liuchengxu/vista.vim'                " project wide c-tags
 Plug 'airblade/vim-rooter'
-Plug 'francoiscabrol/ranger.vim'
+" Plug 'francoiscabrol/ranger.vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-startify'
 " File Navigation
@@ -45,15 +45,17 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'Olical/vim-enmasse'                 " Edit all files in a Quickfix list
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
-Plug 'editorconfig/editorconfig-vim'
+"Plug 'editorconfig/editorconfig-vim'
+Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'glts/vim-radical'
-Plug 'jasonlong/vim-textobj-css'
 Plug 'jiangmiao/auto-pairs'
+Plug 'jasonlong/vim-textobj-css'
+Plug 'sgur/vim-textobj-parameter'
 Plug 'kana/vim-textobj-user'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier'
-Plug 'sgur/vim-textobj-parameter'
+Plug 'vimwiki/vimwiki'
 Plug 'sheerun/vim-polyglot'               " Vim language support
 Plug 'tommcdo/vim-exchange'               " Swap regions of text
 Plug 'tpope/vim-abolish'                  " String Coercion
@@ -68,6 +70,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'janko/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'voldikss/vim-floaterm'
+Plug 'metakirby5/codi.vim'
 " Git
 "Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'

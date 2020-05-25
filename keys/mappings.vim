@@ -42,6 +42,7 @@ else
 
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
+  
   " Alternate way to quit
   nnoremap <silent> <C-Q> :wq!<CR>
   " Use control-c instead of escape

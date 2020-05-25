@@ -5,10 +5,9 @@ let GtagsCscope_Ignore_Case =  0
 let AutoPairsMapCh =  1 
 let Gtags_Shell_Quote_Char = "'"
 let Gtags_Auto_Update =  0 
-let AutoPairsMapBS =  1 
 let AutoPairsShortcutBackInsert = "<M-b>"
+let EditorConfig_exec_path = ""
 let GtagsCscope_Keep_Alive =  0 
-let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
 let GtagsCscope_Auto_Load =  0 
 let AutoPairsShortcutToggle = "<M-p>"
@@ -17,14 +16,13 @@ let Gtags_VerticalWindow =  0
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
-let EditorConfig_exec_path = ""
 let UltiSnipsRemoveSelectModeMappings =  1 
 let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
-let Gtags_Efm = "%f	%l	%m"
 let WebDevIconsUnicodeDecorateFileNodes =  1 
+let AutoPairsMapBS =  1 
 let AutoPairsSmartQuotes =  1 
 let DevIconsEnableFolderPatternMatching =  1 
 let Gtags_Close_When_Single =  0 
@@ -33,6 +31,7 @@ let AutoPairsShortcutFastWrap = "<M-e>"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
+let EditorConfig_preserve_formatoptions =  0 
 let AutoPairsCenterLine =  1 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let AutoPairsLoaded =  1 
@@ -53,6 +52,7 @@ let Gtags_Single_Quote_Char = "'\"'\"'"
 let GtagsCscope_Absolute_Path =  0 
 let UltiSnipsEnableSnipMate =  1 
 let EditorConfig_verbose =  0 
+let Gtags_Efm = "%f	%l	%m"
 let Gtags_Auto_Map =  0 
 let UltiSnipsListSnippets = "<c-tab>"
 let Gtags_Emacs_Like_Mode =  0 
@@ -72,23 +72,30 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +56 src/app/shared/modules/contract-log-table/contract-log-table.component.ts
-badd +245 src/app/shared/modules/contract-log-table/contract-log-table.component.html
+badd +123 src/app/features/matter/components/matter-list-view/matter-list-view.component.html
+badd +518 src/app/features/matter/components/matter-list-view/matter-list-view.component.ts
+badd +23 src/app/features/admin/developers/modules/api-key/api-key.component.ts
+badd +11 src/app/features/admin/developers/modules/developers-container/developers-container.component.html
+badd +179 src/app/features/admin/developers/modules/developers-container/developers-container.component.ts
+badd +4 src/app/features/admin/developers/modules/api-key/api-key.component.html
+badd +1 term://.//96096:\'fzf\'\ --history\ \'/home/kartel/.local/share/fzf-history/files\'\ \'--color=bg+:\#3c3836,bg:\#282828,spinner:\#fb4934,hl:\#928374,fg:\#ebdbb2,header:\#928374,info:\#8ec07c,pointer:\#fb4934,marker:\#fb4934,fg+:\#ebdbb2,prompt:\#fb4934,hl+:\#fb4934\'\ \'-m\'\ \'--prompt\'\ \'~/D/x/X20.Angular/\'\ \'--layout=reverse\'\ \'--info=inline\'\ \'--preview\'\ \'\'\\\'\'/home/kartel/.config/nvim/autoload/plugged/fzf.vim/bin/preview.sh\'\\\'\'\ \{}\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvim2isiJR/881;\#FZF
+badd +18 src/app/features/admin/developers/services/api-key.service.ts
+badd +242 src/app/features/matter/components/matter-list-pipeline/matter-list-pipeline.component.ts
+badd +23 src/app/features/matter/components/matter-list-pipeline/matter-list-pipeline.component.html
+badd +92 src/app/features/matter/containers/matter-list/matter-list.component.ts
+badd +5 src/app/features/matter/containers/matter-list/matter-list.component.html
+badd +97 src/app/features/matter/store/selectors/matter-list.selectors.ts
+badd +382 src/app/features/matter/store/reducers/matter-list.reducer.ts
+badd +52 src/app/features/matter/components/matter-list-view/matter-list-view.component.scss
 argglobal
 %argdel
-edit src/app/shared/modules/contract-log-table/contract-log-table.component.ts
+edit src/app/features/admin/developers/services/api-key.service.ts
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -99,33 +106,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 57 - ((51 * winheight(0) + 33) / 66)
+let s:l = 19 - ((18 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-57
-normal! 0
-wincmd w
-argglobal
-if bufexists("src/app/shared/modules/contract-log-table/contract-log-table.component.html") | buffer src/app/shared/modules/contract-log-table/contract-log-table.component.html | else | edit src/app/shared/modules/contract-log-table/contract-log-table.component.html | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 311 - ((49 * winheight(0) + 33) / 66)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-311
-normal! 021|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
+19
+normal! 03|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
