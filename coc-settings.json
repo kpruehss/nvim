@@ -5,12 +5,14 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
+    "graphql",
     "yaml",
     "json",
     "javascriptreact",
     "html",
     "css",
-    "scss"
+    "scss",
+    "markdown"
   ],
   "coc.preferences.hoverTarget": "float",
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
