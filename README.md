@@ -1,7 +1,3 @@
-# Nvim Mach 2
-
-![Nvim Mach 2 pic](~/Pictures/nvim.png)
-
 ## Install Neovim
 
 - On Mac
