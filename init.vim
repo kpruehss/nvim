@@ -12,7 +12,8 @@ else
   source $HOME/.config/nvim/themes/airline.vim
   " source $HOME/.config/nvim/themes/one.vim
   " source $HOME/.config/nvim/themes/onedark.vim
-  source $HOME/.config/nvim/themes/gruvbox.vim
+  " source $HOME/.config/nvim/themes/gruvbox.vim
+  source $HOME/.config/nvim/themes/gruvbox-material.vim
   source $HOME/.config/nvim/themes/syntax.vim
   " Plug Configs
   source $HOME/.config/nvim/plug-config/closetags.vim

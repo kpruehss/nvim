@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/gruvbox-material'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'            " Handy info
 Plug 'retorillo/airline-tablemode.vim'

@@ -13,12 +13,13 @@ let GtagsCscope_Quiet =  0
 let GtagsCscope_Auto_Load =  0 
 let AutoPairsShortcutToggle = "<M-p>"
 let AutoPairsMapCR =  1 
+let Lf_PopupColorscheme = "gruvbox_material"
 let Gtags_VerticalWindow =  0 
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
+let VM_Extend_hl = "Visual"
 let Gtags_Double_Quote_Char = "\""
 let UltiSnipsRemoveSelectModeMappings =  1 
-let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
 let WebDevIconsUnicodeDecorateFileNodes =  1 
@@ -28,19 +29,22 @@ let DevIconsEnableFolderPatternMatching =  1
 let Gtags_Close_When_Single =  0 
 let UltiSnipsExpandTrigger = "<tab>"
 let AutoPairsShortcutFastWrap = "<M-e>"
+let VM_Insert_hl = "Cursor"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
+let VM_Mono_hl = "Cursor"
 let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let AutoPairsCenterLine =  1 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
-let Gtags_Single_Quote_Char = "'\"'\"'"
 let AutoPairsLoaded =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
+let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let DevIconsAppendArtifactFix =  0 
 let Gtags_No_Auto_Jump =  0 
 let WebDevIconsUnicodeDecorateFolderNodes =  1 
+let Lf_StlColorscheme = "gruvbox_material"
 let WebDevIconsNerdTreeBeforeGlyphPadding = " "
 let WebDevIconsUnicodeGlyphDoubleWidth =  1 
 let AutoPairsMultilineClose =  1 
@@ -48,7 +52,7 @@ let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let UltiSnipsJumpBackwardTrigger = "<c-k>"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
-let Gtags_OpenQuickfixWindow =  1 
+let Gtags_Single_Quote_Char = "'\"'\"'"
 let GtagsCscope_Absolute_Path =  0 
 let UltiSnipsEnableSnipMate =  1 
 let EditorConfig_verbose =  0 
@@ -61,11 +65,13 @@ let NERDTreeUpdateOnCursorHold =  1
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
 let DevIconsEnableFolderExtensionPatternMatching =  0 
+let VM_Cursor_hl = "Cursor"
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
+let Gtags_OpenQuickfixWindow =  1 
 silent only
 cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
@@ -78,43 +84,28 @@ badd +642 src/app/features/registers/dispute-log/components/dispute-log-list/dis
 badd +1 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.ts
 badd +29 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.html
 badd +73 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.html
-badd +31 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts
+badd +191 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts
 badd +106 src/app/features/registers/dispute-log/containers/dispute-log-list-container/dispute-log-list-container.component.ts
-badd +48 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
+badd +42 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
 badd +175 src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html
 badd +119 src/app/shared/modules/contract-log-form/contract-log-form.component.html
 badd +304 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +1 \[coc-explorer]-1
 argglobal
 %argdel
 edit src/app/shared/services/dispute-log/dispute-log-list.facade.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 120 + 128) / 256)
-exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
-argglobal
-enew
-file \[coc-explorer]-1
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-wincmd w
+exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -125,15 +116,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 48 - ((32 * winheight(0) + 33) / 66)
+let s:l = 49 - ((31 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-48
+49
 normal! 025|
 wincmd w
 argglobal
-if bufexists("src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts") | buffer src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts | else | edit src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts | endif
+if bufexists("src/app/shared/services/dispute-log/dispute-log-list.facade.ts") | buffer src/app/shared/services/dispute-log/dispute-log-list.facade.ts | else | edit src/app/shared/services/dispute-log/dispute-log-list.facade.ts | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -143,17 +134,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 191 - ((55 * winheight(0) + 33) / 66)
+let s:l = 49 - ((31 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-191
-normal! 016|
+49
+normal! 025|
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 120 + 128) / 256)
-exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 124 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 125 + 125) / 250)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
