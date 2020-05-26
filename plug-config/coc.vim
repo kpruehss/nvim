@@ -1,4 +1,36 @@
-" Use tab for trigger completion with characters ahead and navigate.
+let g:coc_global_extensions = [
+    \ 'coc-actions',
+    \ 'coc-angular',
+    \ 'coc-css',
+    \ 'coc-cssmodules',
+    \ 'coc-erlang_ls',
+    \ 'coc-elixir',
+    \ 'coc-emmet',
+    \ 'coc-emoji',
+    \ 'coc-explorer',
+    \ 'coc-floaterm',
+    \ 'coc-highlight',
+    \ 'coc-html',
+    \ 'coc-jest',
+    \ 'coc-json',
+    \ 'coc-lists',
+    \ 'coc-markdownlint',
+    \ 'coc-marketplace',
+    \ 'coc-pairs',
+    \ 'coc-prettier',
+    \ 'coc-python',
+    \ 'coc-snippets',
+    \ 'coc-spell-checker',
+    \ 'coc-svg',
+    \ 'coc-tailwindcss',
+    \ 'coc-tslint-plugin',
+    \ 'coc-tsserver',
+    \ 'coc-vetur',
+    \ 'coc-vimlsp',
+    \ 'coc-xml',
+    \ 'coc-yaml',
+    \ 'coc-yank',
+    \ ]" Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 "inoremap <silent><expr> <TAB>

@@ -6,6 +6,7 @@ let AutoPairsMapCh =  1
 let Gtags_Shell_Quote_Char = "'"
 let Gtags_Auto_Update =  0 
 let AutoPairsShortcutBackInsert = "<M-b>"
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let EditorConfig_exec_path = ""
 let GtagsCscope_Keep_Alive =  0 
 let GtagsCscope_Quiet =  0 
@@ -17,7 +18,6 @@ let DevIconsEnableFoldersOpenClose =  0
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
 let UltiSnipsRemoveSelectModeMappings =  1 
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
@@ -34,8 +34,8 @@ let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let AutoPairsCenterLine =  1 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
+let Gtags_Single_Quote_Char = "'\"'\"'"
 let AutoPairsLoaded =  1 
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let DevIconsAppendArtifactFix =  0 
@@ -48,7 +48,7 @@ let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let UltiSnipsJumpBackwardTrigger = "<c-k>"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
-let Gtags_Single_Quote_Char = "'\"'\"'"
+let Gtags_OpenQuickfixWindow =  1 
 let GtagsCscope_Absolute_Path =  0 
 let UltiSnipsEnableSnipMate =  1 
 let EditorConfig_verbose =  0 
@@ -60,42 +60,61 @@ let AutoPairsFlyMode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
+let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
-let Gtags_OpenQuickfixWindow =  1 
 silent only
 cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +123 src/app/features/matter/components/matter-list-view/matter-list-view.component.html
-badd +518 src/app/features/matter/components/matter-list-view/matter-list-view.component.ts
-badd +23 src/app/features/admin/developers/modules/api-key/api-key.component.ts
-badd +11 src/app/features/admin/developers/modules/developers-container/developers-container.component.html
-badd +179 src/app/features/admin/developers/modules/developers-container/developers-container.component.ts
-badd +4 src/app/features/admin/developers/modules/api-key/api-key.component.html
-badd +1 term://.//96096:\'fzf\'\ --history\ \'/home/kartel/.local/share/fzf-history/files\'\ \'--color=bg+:\#3c3836,bg:\#282828,spinner:\#fb4934,hl:\#928374,fg:\#ebdbb2,header:\#928374,info:\#8ec07c,pointer:\#fb4934,marker:\#fb4934,fg+:\#ebdbb2,prompt:\#fb4934,hl+:\#fb4934\'\ \'-m\'\ \'--prompt\'\ \'~/D/x/X20.Angular/\'\ \'--layout=reverse\'\ \'--info=inline\'\ \'--preview\'\ \'\'\\\'\'/home/kartel/.config/nvim/autoload/plugged/fzf.vim/bin/preview.sh\'\\\'\'\ \{}\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvim2isiJR/881;\#FZF
-badd +18 src/app/features/admin/developers/services/api-key.service.ts
-badd +242 src/app/features/matter/components/matter-list-pipeline/matter-list-pipeline.component.ts
-badd +23 src/app/features/matter/components/matter-list-pipeline/matter-list-pipeline.component.html
-badd +92 src/app/features/matter/containers/matter-list/matter-list.component.ts
-badd +5 src/app/features/matter/containers/matter-list/matter-list.component.html
-badd +97 src/app/features/matter/store/selectors/matter-list.selectors.ts
-badd +382 src/app/features/matter/store/reducers/matter-list.reducer.ts
-badd +52 src/app/features/matter/components/matter-list-view/matter-list-view.component.scss
+badd +10 src/app/features/dashboard/components/dispute-log/dispute-log.component.ts
+badd +2 src/app/features/registers/dispute-log/components/dispute-log-list/dispute-log-list.component.ts
+badd +642 src/app/features/registers/dispute-log/components/dispute-log-list/dispute-log-list.component.html
+badd +1 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.ts
+badd +29 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.html
+badd +73 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.html
+badd +31 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts
+badd +106 src/app/features/registers/dispute-log/containers/dispute-log-list-container/dispute-log-list-container.component.ts
+badd +48 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
+badd +175 src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html
+badd +119 src/app/shared/modules/contract-log-form/contract-log-form.component.html
+badd +304 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 argglobal
 %argdel
-edit src/app/features/admin/developers/services/api-key.service.ts
+edit src/app/shared/services/dispute-log/dispute-log-list.facade.ts
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 120 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
+argglobal
+enew
+file \[coc-explorer]-1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -106,12 +125,35 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 33) / 66)
+let s:l = 48 - ((32 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 03|
+48
+normal! 025|
+wincmd w
+argglobal
+if bufexists("src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts") | buffer src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts | else | edit src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 191 - ((55 * winheight(0) + 33) / 66)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+191
+normal! 016|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 120 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 84 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
