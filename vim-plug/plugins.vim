@@ -50,7 +50,7 @@ Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'glts/vim-radical'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 Plug 'jasonlong/vim-textobj-css'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'kana/vim-textobj-user'
