@@ -2,7 +2,7 @@ let g:coc_global_extensions = [
     \ 'coc-actions',
     \ 'coc-angular',
     \ 'coc-css',
-    \ 'coc-cssmodules',
+    \ 'coc-scssmodules',
     \ 'coc-erlang_ls',
     \ 'coc-elixir',
     \ 'coc-emmet',

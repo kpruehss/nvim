@@ -2,91 +2,119 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 let GtagsCscope_Ignore_Case =  0 
+let AutoPairsMapCh =  1 
 let Gtags_Shell_Quote_Char = "'"
-let Gtags_Auto_Update =  0 
-let AutoPairsMapBS =  1 
-let AutoPairsShortcutBackInsert = "<M-b>"
 let AutoPairsLoaded =  1 
+let Gtags_Auto_Update =  0 
+let VM_Extend_hl = "Visual"
+let AutoPairsShortcutBackInsert = "<M-b>"
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let EditorConfig_exec_path = ""
 let GtagsCscope_Keep_Alive =  0 
-let EditorConfig_preserve_formatoptions =  0 
 let GtagsCscope_Quiet =  0 
 let GtagsCscope_Auto_Load =  0 
 let AutoPairsShortcutToggle = "<M-p>"
 let AutoPairsMapCR =  1 
+let Lf_PopupColorscheme = "gruvbox_material"
 let Gtags_VerticalWindow =  0 
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
-let EditorConfig_exec_path = ""
+let UltiSnipsRemoveSelectModeMappings =  1 
+let DevIconsEnableFolderExtensionPatternMatching =  0 
+let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
+let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
-let Gtags_OpenQuickfixWindow =  1 
-let Gtags_Efm = "%f	%l	%m"
 let WebDevIconsUnicodeDecorateFileNodes =  1 
-let AutoPairsMapCh =  1 
-let AutoPairsSmartQuotes =  1 
+let AutoPairsMapBS =  1 
 let DevIconsEnableFolderPatternMatching =  1 
 let Gtags_Close_When_Single =  0 
-let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
+let UltiSnipsExpandTrigger = "<tab>"
 let AutoPairsShortcutFastWrap = "<M-e>"
+let VM_Insert_hl = "Cursor"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
+let EditorConfig_preserve_formatoptions =  0 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
+let Gtags_Single_Quote_Char = "'\"'\"'"
+let AutoPairsCenterLine =  1 
+let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
-let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
+let AutoPairsFlyMode =  0 
 let DevIconsAppendArtifactFix =  0 
 let Gtags_No_Auto_Jump =  0 
 let WebDevIconsUnicodeDecorateFolderNodes =  1 
+let Lf_StlColorscheme = "gruvbox_material"
 let WebDevIconsNerdTreeBeforeGlyphPadding = " "
 let WebDevIconsUnicodeGlyphDoubleWidth =  1 
+let VM_Mono_hl = "Cursor"
 let AutoPairsMultilineClose =  1 
 let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
+let UltiSnipsJumpBackwardTrigger = "<c-k>"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
-let Gtags_Single_Quote_Char = "'\"'\"'"
+let Gtags_OpenQuickfixWindow =  1 
 let GtagsCscope_Absolute_Path =  0 
-let EditorConfig_verbose =  0 
-let Gtags_Auto_Map =  0 
-let AutoPairsCenterLine =  1 
-let Gtags_Emacs_Like_Mode =  0 
-let AutoPairsFlyMode =  0 
-let NERDTreeUpdateOnCursorHold =  1 
-let DevIconsDefaultFolderOpenSymbol = ""
-let DevIconsEnableFolderExtensionPatternMatching =  0 
-let WebDevIconsTabAirLineBeforeGlyphPadding = " "
+let UltiSnipsEnableSnipMate =  1 
 let AutoPairsMoveCharacter = "()[]{}\"'"
 let AutoPairsWildClosedPair = ""
+let EditorConfig_verbose =  0 
+let Gtags_Efm = "%f	%l	%m"
+let Gtags_Auto_Map =  0 
+let UltiSnipsListSnippets = "<c-tab>"
+let Gtags_Emacs_Like_Mode =  0 
+let NERDTreeUpdateOnCursorHold =  1 
+let UltiSnipsEditSplit = "normal"
+let DevIconsDefaultFolderOpenSymbol = ""
+let AutoPairsSmartQuotes =  1 
+let VM_Cursor_hl = "Cursor"
+let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
 silent only
-cd ~/Devel/xakia/X20.Angular
+cd ~/Devel/xakia/X20.Hub
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +2 ~/Devel/xakia/X20.Hub/src/modules/Matter/Pages/MatterListPage.vue
-badd +421 ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue
-badd +20 ~/Devel/xakia/X20.Hub/src/components/XakiaMoneyInput.vue
-badd +39 ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/MatterList.vue
-badd +12 ~/Devel/xakia/X20.Hub/src/components/SlideoutPanel.vue
-badd +3 ~/Devel/xakia/X20.Hub/src/components/XakiaTextField.vue
-badd +1 src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
+badd +2 src/modules/Matter/Pages/MatterListPage.vue
+badd +421 src/modules/Matter/Components/AddExpenseSlideout.vue
+badd +50 src/components/XakiaMoneyInput.vue
+badd +39 src/modules/Matter/Components/MatterList.vue
+badd +12 src/components/SlideoutPanel.vue
+badd +3 src/components/XakiaTextField.vue
+badd +131 ~/Devel/xakia/X20.Angular/src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
 argglobal
 %argdel
-edit src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
+edit src/components/XakiaMoneyInput.vue
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-1wincmd h
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
 wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 102 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 102 + 128) / 256)
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -97,15 +125,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 143 - ((28 * winheight(0) + 34) / 68)
+let s:l = 50 - ((49 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-143
-normal! 0
+50
+normal! 09|
 wincmd w
 argglobal
-if bufexists("~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue") | buffer ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue | else | edit ~/Devel/xakia/X20.Hub/src/modules/Matter/Components/AddExpenseSlideout.vue | endif
+if bufexists("src/modules/Matter/Components/AddExpenseSlideout.vue") | buffer src/modules/Matter/Components/AddExpenseSlideout.vue | else | edit src/modules/Matter/Components/AddExpenseSlideout.vue | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -115,15 +143,17 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 421 - ((60 * winheight(0) + 34) / 68)
+let s:l = 421 - ((58 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 421
 normal! 020|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 102 + 128) / 256)
+exe 'vert 3resize ' . ((&columns * 102 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

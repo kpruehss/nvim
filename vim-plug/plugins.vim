@@ -71,7 +71,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'janko/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'voldikss/vim-floaterm'
-Plug 'metakirby5/codi.vim'
+Plug 'ChristianChiarulli/codi.vim'        " Fork of codi with virtual text
+" Plug 'metakirby5/codi.vim'
 " Git
 "Plug 'mhinz/vim-signify'
 Plug 'airblade/vim-gitgutter'

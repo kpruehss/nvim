@@ -6,6 +6,7 @@ let AutoPairsMapCh =  1
 let Gtags_Shell_Quote_Char = "'"
 let AutoPairsLoaded =  1 
 let Gtags_Auto_Update =  0 
+let VM_Extend_hl = "Visual"
 let AutoPairsShortcutBackInsert = "<M-b>"
 let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let EditorConfig_exec_path = ""
@@ -18,9 +19,10 @@ let Lf_PopupColorscheme = "gruvbox_material"
 let Gtags_VerticalWindow =  0 
 let DevIconsEnableFoldersOpenClose =  0 
 let GtagsCscope_Use_Old_Key_Map =  0 
-let VM_Extend_hl = "Visual"
 let Gtags_Double_Quote_Char = "\""
 let UltiSnipsRemoveSelectModeMappings =  1 
+let DevIconsEnableFolderExtensionPatternMatching =  0 
+let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
 let WebDevIconsNerdTreeAfterGlyphPadding = " "
 let WebDevIconsUnicodeDecorateFileNodes =  1 
@@ -31,28 +33,28 @@ let UltiSnipsExpandTrigger = "<tab>"
 let AutoPairsShortcutFastWrap = "<M-e>"
 let VM_Insert_hl = "Cursor"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
-let VM_Mono_hl = "Cursor"
 let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
+let Gtags_Single_Quote_Char = "'\"'\"'"
 let AutoPairsCenterLine =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let AutoPairsFlyMode =  0 
-let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let DevIconsAppendArtifactFix =  0 
 let Gtags_No_Auto_Jump =  0 
 let WebDevIconsUnicodeDecorateFolderNodes =  1 
 let Lf_StlColorscheme = "gruvbox_material"
 let WebDevIconsNerdTreeBeforeGlyphPadding = " "
 let WebDevIconsUnicodeGlyphDoubleWidth =  1 
+let VM_Mono_hl = "Cursor"
 let AutoPairsMultilineClose =  1 
 let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let UltiSnipsJumpBackwardTrigger = "<c-k>"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
-let Gtags_Single_Quote_Char = "'\"'\"'"
+let Gtags_OpenQuickfixWindow =  1 
 let GtagsCscope_Absolute_Path =  0 
 let UltiSnipsEnableSnipMate =  1 
 let AutoPairsMoveCharacter = "()[]{}\"'"
@@ -65,13 +67,11 @@ let Gtags_Emacs_Like_Mode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
-let DevIconsEnableFolderExtensionPatternMatching =  0 
 let AutoPairsSmartQuotes =  1 
 let VM_Cursor_hl = "Cursor"
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
-let Gtags_OpenQuickfixWindow =  1 
 silent only
 cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
@@ -85,15 +85,18 @@ badd +1 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispu
 badd +29 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.html
 badd +73 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.html
 badd +191 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts
-badd +106 src/app/features/registers/dispute-log/containers/dispute-log-list-container/dispute-log-list-container.component.ts
-badd +49 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
+badd +1 src/app/features/registers/dispute-log/containers/dispute-log-list-container/dispute-log-list-container.component.ts
+badd +43 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
 badd +75 src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html
-badd +119 src/app/shared/modules/contract-log-form/contract-log-form.component.html
-badd +304 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
-badd +1 \[coc-explorer]-1
+badd +115 src/app/shared/modules/contract-log-form/contract-log-form.component.html
+badd +320 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+badd +18 src/app/features/matter/containers/dispute-log-container/dispute-log-container.component.html
+badd +23 src/app/shared/modules/contract-log-form/contract-log-form.module.ts
+badd +39 src/app/shared/shared.module.ts
+badd +0 src/app/shared/services/helper.service.ts
 argglobal
 %argdel
-edit src/app/shared/services/dispute-log/dispute-log-list.facade.ts
+edit src/app/shared/modules/contract-log-form/contract-log-form.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -104,10 +107,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
-exe '3resize ' . ((&lines * 2 + 35) / 70)
-exe 'vert 3resize ' . ((&columns * 80 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -118,15 +119,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 49 - ((32 * winheight(0) + 33) / 66)
+let s:l = 320 - ((39 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-49
-normal! 025|
+320
+normal! 012|
 wincmd w
 argglobal
-if bufexists("src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html") | buffer src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html | else | edit src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html | endif
+if bufexists("src/app/shared/services/helper.service.ts") | buffer src/app/shared/services/helper.service.ts | else | edit src/app/shared/services/helper.service.ts | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -136,29 +137,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 75 - ((32 * winheight(0) + 33) / 66)
+let s:l = 165 - ((25 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-75
-normal! 022|
-wincmd w
-argglobal
-enew
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
+165
+normal! 0
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 127 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 128 + 128) / 256)
-exe '3resize ' . ((&lines * 2 + 35) / 70)
-exe 'vert 3resize ' . ((&columns * 80 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
+exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
