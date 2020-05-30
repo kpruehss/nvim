@@ -1,0 +1,123 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+snippet e= "<%= %> render block" b
+<%= $1 %>
+endsnippet
+
+snippet ee "<% %> exec block" b
+<% $1 %>
+endsnippet
+
+snippet e# "<%# %> comment block" b
+<%# $1 %>
+endsnippet
+
+snippet end "<% end %> end tag" b
+<% end %>$1
+endsnippet
+
+snippet e-for "eex for" b
+<%= for ${1:item} <- @$1s do %>
+	$2
+<% end %>
+endsnippet
+
+snippet e-if "eex if" b
+<%= if $1 do %>
+	$2
+<% end %>
+endsnippet
+
+snippet e-ife "eex if else" b
+<%= if $1 do %>
+	$2
+<% else %>
+	$3
+<% end %>
+endsnippet
+
+snippet e-else "eex else" b
+<% else %>
+endsnippet
+
+snippet e-cond "eex cond" b
+<%= cond do %>
+	<% $1 -> %>
+		$2
+	<% true -> %>
+		$3
+<% end %>
+endsnippet
+
+snippet e-unless "eex unless" b
+<%= unless $1 do %>
+	$2
+<% end %>
+endsnippet
+
+snippet e-ff "eex form_for" b
+<%= form_for @${1:changeset}, ${2:url}, ${3:[]}, fn f -> %>
+	$4
+<% end %>
+endsnippet
+
+snippet e-et "eex form error tag" b
+<%= error_tag ${1:f}, :${2:field} %>
+endsnippet
+
+snippet e-ti "eex form text input" b
+<%= text_input ${1:f}, :${2:field} %>
+endsnippet
+
+snippet e-la "eex form label" b
+<%= label ${1:f}, :${2:field}, "${3:Text}" %>
+endsnippet
+
+snippet e-subm "eex form submit" b
+<%= submit ${1:Text} %>
+endsnippet
+
+snippet e-submc "eex form submit with class" b
+<%= submit ${1:Text}, class: "${2:btn btn-primary}" %>
+endsnippet
+
+snippet e-pi "eex password input" b
+<%= password_input ${1:text}, :${2:field} %>
+endsnippet
+
+snippet e-lt "eex link" b
+<%= link "${1:text}", to: ${2:url} %>
+endsnippet
+
+snippet e-ltb "eex link block" b
+<%= link to: ${1:url} do %>
+	${2:text}
+<% end %>
+endsnippet
+
+snippet e-render "eex render" b
+<%= render "${1:partial}.html", ${2:local_var: @local} %>
+endsnippet

@@ -2,7 +2,8 @@
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showAbbreviationSuggestions": true,
   "emmet.includeLanguages": {
-    "HTML (eex)": "html",
+    "html-eex": "html",
+    "eelixir": "html",
     "vue-html": "html",
     "javascript": "javascriptreact"
   },
