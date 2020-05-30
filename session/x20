@@ -21,6 +21,7 @@ let DevIconsEnableFoldersOpenClose =  0
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
 let UltiSnipsRemoveSelectModeMappings =  1 
+let AutoPairsSmartQuotes =  1 
 let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
@@ -34,7 +35,6 @@ let AutoPairsShortcutFastWrap = "<M-e>"
 let VM_Insert_hl = "Cursor"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let DevIconsArtifactFixChar = " "
-let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let Gtags_Single_Quote_Char = "'\"'\"'"
@@ -52,6 +52,7 @@ let VM_Mono_hl = "Cursor"
 let AutoPairsMultilineClose =  1 
 let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let UltiSnipsJumpBackwardTrigger = "<c-k>"
+let EditorConfig_max_line_indicator = "line"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
 let Gtags_OpenQuickfixWindow =  1 
@@ -67,7 +68,6 @@ let Gtags_Emacs_Like_Mode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
-let AutoPairsSmartQuotes =  1 
 let VM_Cursor_hl = "Cursor"
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
@@ -78,25 +78,14 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +10 src/app/features/dashboard/components/dispute-log/dispute-log.component.ts
-badd +2 src/app/features/registers/dispute-log/components/dispute-log-list/dispute-log-list.component.ts
-badd +642 src/app/features/registers/dispute-log/components/dispute-log-list/dispute-log-list.component.html
-badd +1 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.ts
-badd +29 src/app/features/matter/components/dispute-log-dispute/dispute-log-dispute.component.html
-badd +73 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.html
-badd +191 src/app/features/matter/components/dispute-log-financials/dispute-log-financials.component.ts
-badd +1 src/app/features/registers/dispute-log/containers/dispute-log-list-container/dispute-log-list-container.component.ts
-badd +43 src/app/shared/services/dispute-log/dispute-log-list.facade.ts
-badd +75 src/app/features/matter/components/dispute-log-proceedings-form/dispute-log-proceedings-form.component.html
-badd +115 src/app/shared/modules/contract-log-form/contract-log-form.component.html
-badd +320 src/app/shared/modules/contract-log-form/contract-log-form.component.ts
-badd +18 src/app/features/matter/containers/dispute-log-container/dispute-log-container.component.html
-badd +23 src/app/shared/modules/contract-log-form/contract-log-form.module.ts
-badd +39 src/app/shared/shared.module.ts
-badd +0 src/app/shared/services/helper.service.ts
+badd +197 src/app/shared/services/helper.service.ts
+badd +51 src/app/features/system-admin/external-firm/components/ger-details/ger-details.component.ts
+badd +109 src/app/features/system-admin/external-firm/components/ger-details/ger-details.component.html
+badd +260 src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.ts
+badd +52 src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.html
 argglobal
 %argdel
-edit src/app/shared/modules/contract-log-form/contract-log-form.component.ts
+edit src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -107,8 +96,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -119,12 +108,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 320 - ((39 * winheight(0) + 25) / 50)
+let s:l = 259 - ((32 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-320
-normal! 012|
+259
+normal! 07|
 wincmd w
 argglobal
 if bufexists("src/app/shared/services/helper.service.ts") | buffer src/app/shared/services/helper.service.ts | else | edit src/app/shared/services/helper.service.ts | endif
@@ -137,16 +126,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 165 - ((25 * winheight(0) + 25) / 50)
+let s:l = 197 - ((30 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-165
-normal! 0
+197
+normal! 051|
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 96 + 96) / 192)
-exe 'vert 2resize ' . ((&columns * 95 + 96) / 192)
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

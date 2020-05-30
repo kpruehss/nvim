@@ -1,7 +1,11 @@
 {
   "emmet.showExpandedAbbreviation": "always",
   "emmet.showAbbreviationSuggestions": true,
-  "emmet.includeLanguages": { "vue-html": "html" },
+  "emmet.includeLanguages": {
+    "HTML (eex)": "html",
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -12,7 +16,8 @@
     "html",
     "css",
     "scss",
-    "markdown"
+    "markdown",
+    "elixir"
   ],
   "coc.preferences.hoverTarget": "float",
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
@@ -33,6 +38,7 @@
 
   "codeLens.enable": true,
   "elixirLS.suggestSpecs": true,
+  "elixirLS.dialyzerEnabled": true,
   "languageserver": {
     "bash": {
       "command": "bash-language-server",

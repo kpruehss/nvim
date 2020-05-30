@@ -21,6 +21,7 @@ let DevIconsEnableFoldersOpenClose =  0
 let GtagsCscope_Use_Old_Key_Map =  0 
 let Gtags_Double_Quote_Char = "\""
 let UltiSnipsRemoveSelectModeMappings =  1 
+let AutoPairsSmartQuotes =  1 
 let DevIconsEnableFolderExtensionPatternMatching =  0 
 let WebDevIconsNerdTreeGitPluginForceVAlign =  1 
 let WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ""
@@ -34,7 +35,6 @@ let AutoPairsShortcutFastWrap = "<M-e>"
 let VM_Insert_hl = "Cursor"
 let WebDevIconsTabAirLineAfterGlyphPadding = ""
 let DevIconsArtifactFixChar = " "
-let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let Gtags_Single_Quote_Char = "'\"'\"'"
@@ -52,6 +52,7 @@ let VM_Mono_hl = "Cursor"
 let AutoPairsMultilineClose =  1 
 let WebDevIconsUnicodeDecorateFolderNodesSymlinkSymbol = ""
 let UltiSnipsJumpBackwardTrigger = "<c-k>"
+let EditorConfig_max_line_indicator = "line"
 let AutoPairsShortcutJump = "<M-n>"
 let AutoPairsMapSpace =  1 
 let Gtags_OpenQuickfixWindow =  1 
@@ -67,7 +68,6 @@ let Gtags_Emacs_Like_Mode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
-let AutoPairsSmartQuotes =  1 
 let VM_Cursor_hl = "Cursor"
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
@@ -79,42 +79,30 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +2 src/modules/Matter/Pages/MatterListPage.vue
-badd +421 src/modules/Matter/Components/AddExpenseSlideout.vue
+badd +203 src/modules/Matter/Components/AddExpenseSlideout.vue
 badd +50 src/components/XakiaMoneyInput.vue
 badd +39 src/modules/Matter/Components/MatterList.vue
 badd +12 src/components/SlideoutPanel.vue
 badd +3 src/components/XakiaTextField.vue
 badd +131 ~/Devel/xakia/X20.Angular/src/app/features/admin/general-settings/components/feature-list-view/feature-list-view.component.ts
+badd +97 ~/Devel/xakia/X20.Hub/src/components/TopNav.vue
+badd +7 src/services/AuthService.ts
+badd +198 node_modules/oidc-client/index.d.ts
 argglobal
 %argdel
-edit src/components/XakiaMoneyInput.vue
+edit node_modules/oidc-client/index.d.ts
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 102 + 128) / 256)
-exe 'vert 3resize ' . ((&columns * 102 + 128) / 256)
-argglobal
-enew
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-wincmd w
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -125,12 +113,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 50 - ((49 * winheight(0) + 33) / 66)
+let s:l = 215 - ((37 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-50
-normal! 09|
+215
+normal! 0
 wincmd w
 argglobal
 if bufexists("src/modules/Matter/Components/AddExpenseSlideout.vue") | buffer src/modules/Matter/Components/AddExpenseSlideout.vue | else | edit src/modules/Matter/Components/AddExpenseSlideout.vue | endif
@@ -143,17 +131,15 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 421 - ((58 * winheight(0) + 33) / 66)
+let s:l = 361 - ((10 * winheight(0) + 33) / 66)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-421
-normal! 020|
+361
+normal! 03|
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 50 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 102 + 128) / 256)
-exe 'vert 3resize ' . ((&columns * 102 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

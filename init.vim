@@ -8,14 +8,14 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 if exists('g:vscode')
   source $HOME/.config/nvim/vscode/windows.vim
 else
-  " Themes
+  " THEMES
   source $HOME/.config/nvim/themes/airline.vim
   " source $HOME/.config/nvim/themes/one.vim
   " source $HOME/.config/nvim/themes/onedark.vim
   source $HOME/.config/nvim/themes/gruvbox.vim
   " source $HOME/.config/nvim/themes/gruvbox-material.vim
   source $HOME/.config/nvim/themes/syntax.vim
-  " Plug Configs
+  " PLUG CONFIGS
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/coc.vim
   source $HOME/.config/nvim/plug-config/codi.vim
