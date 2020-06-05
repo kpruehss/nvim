@@ -35,7 +35,7 @@ else
   source $HOME/.config/nvim/plug-config/start-screen.vim
   source $HOME/.config/nvim/plug-config/test.vim
   source $HOME/.config/nvim/plug-config/vim-rooter.vim
-  source $HOME/.config/nvim/plug-config/vimwiki.vim
+  "source $HOME/.config/nvim/plug-config/vimwiki.vim
   source $HOME/.config/nvim/plug-config/vista.vim
 endif
 

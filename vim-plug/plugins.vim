@@ -57,7 +57,7 @@ Plug 'sgur/vim-textobj-parameter'
 Plug 'kana/vim-textobj-user'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 Plug 'sheerun/vim-polyglot'               " Vim language support
 Plug 'tommcdo/vim-exchange'               " Swap regions of text
 Plug 'tpope/vim-abolish'                  " String Coercion

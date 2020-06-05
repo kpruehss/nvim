@@ -78,14 +78,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +197 src/app/shared/services/helper.service.ts
-badd +51 src/app/features/system-admin/external-firm/components/ger-details/ger-details.component.ts
-badd +109 src/app/features/system-admin/external-firm/components/ger-details/ger-details.component.html
-badd +260 src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.ts
-badd +52 src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.html
+badd +1761 src/assets/i18n/en.json
+badd +841 src/app/features/matter/components/core-matter-form/core-matter-form.component.ts
+badd +1 ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html
+badd +3 src/app/features/matter/models/matter-template.model.ts
 argglobal
 %argdel
-edit src/app/features/admin/external-resources/components/firm-add-popup/firm-add-popup.component.ts
+edit ~/Devel/xakia/X20.Angular/src/app/features/matter/components/core-matter-form/core-matter-form.component.html
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -96,8 +95,19 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 206 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 49 + 128) / 256)
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -108,33 +118,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 259 - ((32 * winheight(0) + 33) / 66)
+let s:l = 42 - ((1 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-259
-normal! 07|
+42
+normal! 012|
 wincmd w
-argglobal
-if bufexists("src/app/shared/services/helper.service.ts") | buffer src/app/shared/services/helper.service.ts | else | edit src/app/shared/services/helper.service.ts | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 197 - ((30 * winheight(0) + 33) / 66)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-197
-normal! 051|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 206 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 49 + 128) / 256)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
