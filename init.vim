@@ -18,7 +18,7 @@ else
   " PLUG CONFIGS
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/coc.vim
-  source $HOME/.config/nvim/plug-config/codi.vim
+  "source $HOME/.config/nvim/plug-config/codi.vim
   source $HOME/.config/nvim/plug-config/commentary.vim
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
