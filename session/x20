@@ -8,6 +8,7 @@ let AutoPairsLoaded =  1
 let Gtags_Auto_Update =  0 
 let VM_Extend_hl = "Visual"
 let AutoPairsShortcutBackInsert = "<M-b>"
+let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let EditorConfig_exec_path = ""
 let GtagsCscope_Keep_Alive =  0 
 let GtagsCscope_Quiet =  0 
@@ -39,7 +40,6 @@ let EditorConfig_preserve_formatoptions =  0
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
 let Gtags_Single_Quote_Char = "'\"'\"'"
 let AutoPairsCenterLine =  1 
-let WebDevIconsUnicodeDecorateFolderNodesExactMatches =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
 let WebDevIconsUnicodeByteOrderMarkerDefaultSymbol = ""
 let AutoPairsFlyMode =  0 
@@ -73,20 +73,13 @@ let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
 silent only
-cd ~/Devel/xakia/X20.Angular
+cd ~/Devel/xakia/X20.Angular/.git
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1761 src/assets/i18n/en.json
-badd +103 src/app/features/registers/party-log/party-log-container/party-log-container.component.ts
-badd +3 src/app/features/registers/party-log/party-log-container/party-log-container.component.html
-badd +127 src/app/features/registers/expense-log/containers/expense-log-list-container/expense-log-list-container.component.ts
-badd +220 src/app/shared/services/expense-log/expense-log.facade.ts
-badd +29 src/app/features/registers/party-log/part-log-list/party-log-list.component.ts
 argglobal
 %argdel
-edit src/app/features/registers/party-log/part-log-list/party-log-list.component.ts
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -94,6 +87,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 argglobal
+enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -102,13 +96,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let s:l = 62 - ((35 * winheight(0) + 33) / 66)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-62
-normal! 06|
+lcd ~/Devel/xakia/X20.Angular
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

@@ -126,6 +126,7 @@ let g:which_key_map.l = {
       \ 'u' : [':CocListResume'                      , 'resume list'],
       \ 'U' : [':CocUpdate'                          , 'update CoC'],
       \ 'v' : [':Vista!!'                            , 'tag viewer'],
+      \ 'V' : [':Vista finder fzf:coc'               , 'fzf tag search'],
       \ 'z' : [':CocDisable'                         , 'disable CoC'],
       \ 'Z' : [':CocEnable'                          , 'enable CoC'],
       \ }

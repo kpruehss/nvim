@@ -1,0 +1,47 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet xa-slideout "Xakia Generic Slideout" b
+<xa-xakia-slideout (closePanel)="closePanel()">
+  <ng-container slideout-title></ng-container>
+  <ng-container slideout-body></ng-container>
+  <ng-container slideout-footer>
+    <xa-xakia-generic-button
+      class="mr-3"
+      [isOutline]="true"
+      (clickEvent)="closePanel()"
+    >
+      {{ 'genericTerms.cancel' | translate }}
+    </xa-xakia-generic-button>
+    <xa-xakia-generic-button
+      [isDisabled]=""
+      (clickEvent)="save()"
+    >
+      {{ 'genericTerms.save' | translate }}
+    </xa-xakia-generic-button>
+  </ng-container>
+</xa-xakia-slideout>
+endsnippet

@@ -26,10 +26,9 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " Project Navigation
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-vinegar'
+"Plug 'tpope/vim-vinegar'
 Plug 'liuchengxu/vista.vim'                " project wide c-tags
 Plug 'airblade/vim-rooter'
-" Plug 'francoiscabrol/ranger.vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 Plug 'mhinz/vim-startify'
 " File Navigation
@@ -50,6 +49,7 @@ Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
 Plug 'honza/vim-snippets'
 Plug 'elixir-editors/vim-elixir'
 Plug 'glts/vim-radical'
+Plug 'glts/vim-magnum'
 Plug 'mattn/emmet-vim'
 "Plug 'jiangmiao/auto-pairs'
 Plug 'jasonlong/vim-textobj-css'

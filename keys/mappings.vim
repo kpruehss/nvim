@@ -2,9 +2,6 @@
 let mapleader=" "
 " let localleader=" "
 nnoremap <Space> <Nop>
-" Set leader key
-" let mapleader = "\\"
-" let localleader = "\\"
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
