@@ -42,6 +42,7 @@ Plug 'c-brenn/fuzzy-projectionist.vim'
 Plug 'andyl/vim-projectionist-elixir'
 Plug 'rbgrouleff/bclose.vim'
 " Editing
+Plug 'lifepillar/pgsql.vim'
 Plug 'Olical/vim-enmasse'                 " Edit all files in a Quickfix list
 Plug 'alvan/vim-closetag'
 Plug 'dhruvasagar/vim-table-mode',        { 'on': 'TableModeEnable' }
@@ -51,13 +52,11 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'glts/vim-radical'
 Plug 'glts/vim-magnum'
 Plug 'mattn/emmet-vim'
-"Plug 'jiangmiao/auto-pairs'
 Plug 'jasonlong/vim-textobj-css'
 Plug 'sgur/vim-textobj-parameter'
 Plug 'kana/vim-textobj-user'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'prettier/vim-prettier'
-"Plug 'vimwiki/vimwiki'
 Plug 'sheerun/vim-polyglot'               " Vim language support
 Plug 'tommcdo/vim-exchange'               " Swap regions of text
 Plug 'tpope/vim-abolish'                  " String Coercion
@@ -68,6 +67,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'                 " Change word surroundings
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 " Task Running /REPL
 Plug 'janko/vim-test'
 Plug 'tpope/vim-dispatch'

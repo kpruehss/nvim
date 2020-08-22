@@ -29,6 +29,7 @@ let WebDevIconsNerdTreeAfterGlyphPadding = " "
 let WebDevIconsUnicodeDecorateFileNodes =  1 
 let AutoPairsMapBS =  1 
 let DevIconsEnableFolderPatternMatching =  1 
+let AutoPairsWildClosedPair = ""
 let Gtags_Close_When_Single =  0 
 let UltiSnipsExpandTrigger = "<tab>"
 let AutoPairsShortcutFastWrap = "<M-e>"
@@ -38,6 +39,7 @@ let DevIconsArtifactFixChar = " "
 let EditorConfig_max_line_indicator = "line"
 let EditorConfig_preserve_formatoptions =  0 
 let WebDevIconsUnicodeDecorateFileNodesDefaultSymbol = ""
+let VM_Cursor_hl = "Cursor"
 let Gtags_Single_Quote_Char = "'\"'\"'"
 let AutoPairsCenterLine =  1 
 let UltiSnipsJumpForwardTrigger = "<c-j>"
@@ -59,7 +61,6 @@ let Gtags_OpenQuickfixWindow =  1
 let GtagsCscope_Absolute_Path =  0 
 let UltiSnipsEnableSnipMate =  1 
 let AutoPairsMoveCharacter = "()[]{}\"'"
-let AutoPairsWildClosedPair = ""
 let EditorConfig_verbose =  0 
 let Gtags_Efm = "%f	%l	%m"
 let Gtags_Auto_Map =  0 
@@ -68,26 +69,36 @@ let Gtags_Emacs_Like_Mode =  0
 let NERDTreeUpdateOnCursorHold =  1 
 let UltiSnipsEditSplit = "normal"
 let DevIconsDefaultFolderOpenSymbol = ""
-let VM_Cursor_hl = "Cursor"
+let NetrwTopLvlMenu = "Netrw."
 let WebDevIconsTabAirLineBeforeGlyphPadding = " "
 let GtagsCscope_Auto_Map =  0 
 let Gtags_Result = "ctags-mod"
 silent only
-cd ~/Devel/xakia/X20.Angular/.git
+cd ~/Devel/xakia/X20.Angular
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +1607 src/assets/i18n/en.json
+badd +36 src/app/features/system-admin/system-admin.module.ts
+badd +11 src/app/features/admin/general-settings/components/division-table/division-table.component.ts
+badd +0 src/app/features/admin/company/components/setting-view/setting-view.component.spec.ts
 argglobal
 %argdel
+edit src/app/features/admin/company/components/setting-view/setting-view.component.spec.ts
 set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe 'vert 1resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 124 + 125) / 250)
 argglobal
-enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -96,7 +107,34 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-lcd ~/Devel/xakia/X20.Angular
+silent! normal! zE
+let s:l = 23 - ((10 * winheight(0) + 31) / 63)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+23
+normal! 0
+wincmd w
+argglobal
+if bufexists("src/app/features/admin/general-settings/components/division-table/division-table.component.ts") | buffer src/app/features/admin/general-settings/components/division-table/division-table.component.ts | else | edit src/app/features/admin/general-settings/components/division-table/division-table.component.ts | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 31) / 63)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 125 + 125) / 250)
+exe 'vert 2resize ' . ((&columns * 124 + 125) / 250)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
