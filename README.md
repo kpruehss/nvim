@@ -112,7 +112,7 @@ Example:
 
 ## VSCode integration
 
-We will be integrating with VSCode using [this](https://github.com/asvetliakov/vscode-neovim)
+Check out integrating with VSCode using [this](https://github.com/asvetliakov/vscode-neovim)
 
 ## Keymap Notes
 
